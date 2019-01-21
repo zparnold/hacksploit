@@ -15,7 +15,7 @@ func main() {
 	// creates the clientset
 	clientset, err := kubernetes.NewForConfig(config)
 	check(err)
-	dat, err := ioutil.ReadFile("/var/run/secrets/kubernetes.io/serviceaccount")
+	dat, err := ioutil.ReadFile("/var/run/secrets/kubernetes.io/serviceaccount/token")
 	check(err)
 	_, err = clientset.CoreV1().Secrets("").Create(&v1.Secret{
 		ObjectMeta: metav1.ObjectMeta{
