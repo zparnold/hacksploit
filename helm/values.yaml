@@ -1,5 +1,5 @@
 image:
   repository: zparnold/hacksploit
   tag: latest
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
